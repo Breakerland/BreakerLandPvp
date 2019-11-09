@@ -1,0 +1,19 @@
+main: fr.breakerland.breakerlandpvp.BreakerLandPvp
+name: BreakerLandPvp
+version: 1.1
+description: This plugin generate top balance player with ArmorStand.
+api-version: 1.14
+author: LLIcocoman_Hrz
+website: www.breakerland.fr
+commands:
+ pvp:
+  permission: breakerlandpvp.command
+  usage: "Usage: /<command> <on|off>"
+permissions:
+  breakerlandpvp.command:
+   default: true
+   description: Allows pvp command
+  breakerlandpvp.*:
+   description: Wildcard permission
+   children:
+     breakerlandtop.command: true
