@@ -55,7 +55,7 @@ public class BreakerLandPvp extends JavaPlugin implements Listener {
 
 	@EventHandler(priority = EventPriority.HIGH, ignoreCancelled = true)
 	public void onAttack(EntityDamageByEntityEvent e) {
-		if (e.getEntityType() == EntityType.PLAYER) {
+		if (e.getEntityType() == EntityType.PLAYER && !e.getEntity().hasMetadata("NPC")) {
 			Player damager;
 			EntityType type = e.getDamager().getType();
 			if (type == EntityType.PLAYER)
